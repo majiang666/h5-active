@@ -1,0 +1,54 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background: #feba33;
+}
+
+// 父级盒子
+#app{
+    position: relative;
+}
+
+// 页面比例
+@w:900;
+@h:1723;
+
+// 区块比例
+@w-child:470;
+@h-child:316;
+
+// 自动计算百分比
+.calcs(@w,@h,@wd,@ht,@tp,@lt){
+    position: absolute;
+    top:round(percentage(@tp/@h),4);
+    left:round(percentage(@lt/@w),4);
+    width:round(percentage(@wd/@w),4);
+    height:round(percentage(@ht/@h),4);
+}
+
+// 实例
+.block1{
+    .calcs(@w,@h,470,316,500,215);
+    background: #f00;
+    display: block;
+}
+
+.block2{
+    .calcs(@w,@h,470,316,850,215);
+    background: #f00;
+    display: block;
+}
+
+.block3{
+    .calcs(@w,@h,470,316,1180,215);
+    background: #f00;
+    display: block;
+}
+
+
+.child{
+    .calcs(@w-child,@h-child,250,50,100,20);
+    background: #fff;
+}

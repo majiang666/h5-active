@@ -1,0 +1,17 @@
+{
+    "plugins": [
+        ["@babel/plugin-transform-runtime",
+            {
+              "absoluteRuntime": true,
+              "corejs": 2,
+              "helpers": true,
+              "regenerator": true,
+              "useESModules": false
+            }
+        ]
+    ],
+    "presets": [
+        ["@babel/preset-env",{"debug":true,"useBuiltIns": "usage"}],
+        ["@babel/preset-react"]
+    ]
+}

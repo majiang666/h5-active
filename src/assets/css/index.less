@@ -1,54 +1,59 @@
 *{
-    margin:0;
-    padding:0;
+  margin:0;
+  padding:0;
 }
 body{
-    background: #feba33;
+  background: #feba33;
 }
 
 // 父级盒子
-#app{
-    position: relative;
+.main{
+  position: relative;
 }
 
 // 页面比例
-@w:900;
-@h:1723;
+@ratioWidth:750;
+@ratioHeight:2800;
 
-// 区块比例
+// 子级区块比例
 @w-child:470;
 @h-child:316;
 
 // 自动计算百分比
-.calcs(@w,@h,@wd,@ht,@tp,@lt){
-    position: absolute;
-    top:round(percentage(@tp/@h),4);
-    left:round(percentage(@lt/@w),4);
-    width:round(percentage(@wd/@w),4);
-    height:round(percentage(@ht/@h),4);
+.calcPercentage(@ratioWidth,@ratioHeight,@imgWidth,@imgHeight,@offsetTop,@offsetLeft){
+  position: absolute;
+  top:round(percentage(@offsetTop/@ratioHeight),4);
+  left:round(percentage(@offsetLeft/@ratioWidth),4);
+  width:round(percentage(@imgWidth/@ratioWidth),4);
+  height:round(percentage(@imgHeight/@ratioHeight),4);
 }
 
 // 实例
-.block1{
-    .calcs(@w,@h,470,316,500,215);
-    background: #f00;
-    display: block;
+.area1,.area2,.area3{
+  display: block;
 }
 
-.block2{
-    .calcs(@w,@h,470,316,850,215);
-    background: #f00;
-    display: block;
+.area1{
+  .calcPercentage(@ratioWidth,@ratioHeight,391,193,478,183);
+  background: #f00;
 }
 
-.block3{
-    .calcs(@w,@h,470,316,1180,215);
-    background: #f00;
-    display: block;
+.area2{
+  .calcPercentage(@ratioWidth,@ratioHeight,391,193,685,183);
+  background: #ccc;
 }
 
+.area3{
+  .calcPercentage(@ratioWidth,@ratioHeight,391,193,892,183);
+  background: #ccff0c;
+}
 
-.child{
-    .calcs(@w-child,@h-child,250,50,100,20);
-    background: #fff;
+.area4{
+  .calcPercentage(@ratioWidth,@ratioHeight,81,25,1360,198);
+  background: #ff0;
+}
+
+.area5{
+  .calcPercentage(@ratioWidth,@ratioHeight,79,25,1342,339);
+  background: #ff0;
 }

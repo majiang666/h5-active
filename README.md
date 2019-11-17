@@ -5,7 +5,7 @@ h5活动适配探究
 [demo](https://www.sjooy.com/h5-active/)
 
 # code
-`
+```
 // 页面比例
 @ratioWidth: 750;
 @ratioHeight: 6326;
@@ -22,4 +22,4 @@ h5活动适配探究
   width: round(percentage(@imgWidth/@ratioWidth),4);
   height: round(percentage(@imgHeight/@ratioHeight),4);
 }
-`
+```

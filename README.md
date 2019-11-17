@@ -1,6 +1,6 @@
 # h5-active
-h5活动适配探究
-[原文](https://www.love85g.com/?p=1987)  
+h5活动适配探究  
+[查看原文](https://www.love85g.com/?p=1987)  
 
 # demo
 [demo](https://www.sjooy.com/h5-active/)  

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #ff524c;
+}
+.main {
+  position: relative;
+}
+.area1,
+.area2,
+.area3 {
+  display: block;
+  height: 100%;
+}
+.area1 {
+  position: absolute;
+  top: 19.902%;
+  left: 9.0667%;
+  width: 40.2667%;
+  height: 2.4344%;
+  background: #ccc;
+}
+.area2 {
+  position: absolute;
+  top: 19.902%;
+  left: 50.6667%;
+  width: 40.2667%;
+  height: 2.4344%;
+  background: #ccc;
+}
+.area3 {
+  position: absolute;
+  top: 22.7632%;
+  left: 9.0667%;
+  width: 40.2667%;
+  height: 2.4344%;
+  background: #ccc;
+}
+.area4 {
+  position: absolute;
+  top: 26.4464%;
+  left: 9.2%;
+  width: 81.6%;
+  height: 3.3829%;
+  z-index: 1;
+}
+.area5 {
+  position: absolute;
+  top: 58.8785%;
+  left: 52.6144%;
+  width: 29.2484%;
+  height: 16.3551%;
+  background: #ccc;
+  z-index: 2;
+}
+
